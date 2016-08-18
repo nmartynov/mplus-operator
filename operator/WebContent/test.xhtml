@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:rich="http://richfaces.org/rich"
+      xmlns:a4j="http://richfaces.org/a4j">
+     <f:view>
+	     <h:head>
+	        <title>Test</title>
+	    </h:head>
+	    <h:body>
+	    <h:form>
+	    	<rich:toolbar height="26px">
+	    		 <rich:dropDownMenu mode="ajax">
+	    		 	<f:facet name="label">
+	                    <h:panelGroup>
+	                        <h:outputText value="File" />
+	                    </h:panelGroup>
+	                </f:facet>
+                <rich:menuItem label="New" />
+	    		 </rich:dropDownMenu>
+	    	</rich:toolbar>
+	    	<h:inputText value="#{testBean.name}"></h:inputText>
+	    	<rich:panelMenu mode="ajax" iconGroupTopPosition="right"
+                iconExpandedTopGroup="chevronUp"
+                iconCollapsedTopGroup="chevronDown"
+                iconExpandedGroup="disc"
+                iconCollapsedGroup="disc">
+			   <rich:panelMenuGroup label="Group 1">
+			      <rich:panelMenuItem label="Item 1.1"/>
+			      <rich:panelMenuItem label="Item 1.2"/>
+			      <rich:panelMenuItem label="Item 1.3"/>
+			   </rich:panelMenuGroup>
+			</rich:panelMenu>
+	    </h:form>	
+	    </h:body>
+     </f:view> 
+</html>
